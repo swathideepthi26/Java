@@ -1,0 +1,165 @@
+1.	Write a Java program to get a number from the user and print whether it is positive or negative.
+
+Sample Output
+Input number: 35
+Expected Output :
+Number is positive
+
+import java.util.*;
+ class Demo {
+
+    
+  public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Input number: ");
+        int input = scan.nextInt();
+
+        if (input > 0)
+        {
+            System.out.println("Number is positive");
+        }
+        else if (input < 0)
+        {
+            System.out.println("Number is negative");
+        }
+    }
+}
+
+2.Take three numbers from the user and print the greatest number
+
+Sample Output
+Input the 1st number: 25
+Input the 2nd number: 78
+Input the 3rd number: 87
+Expected Output :
+The greatest: 87
+
+import java.util.*;
+class Demo 
+{
+   public static void main(String[] args)
+    {
+       Scanner scan = new Scanner(System.in);
+       System.out.print("Input the 1st number: ");
+       int number1 = scan.nextInt();
+       System.out.print("Input the 2nd number: ");
+       int number2 = scan.nextInt();
+       System.out.print("Input the 3rd number: ");
+       int number3 = scan.nextInt();
+       if (number1 > number2)
+       if (number1 > number3)
+       System.out.println("The greatest number is: " + number1);
+       if (number2 > number1)
+       if (number2 > number3)
+       System.out.println("The greatest number is: " + number2);
+       if (number3 > number1)
+       if (number3 > number2)
+       System.out.println("The greatest number is: " + number3);
+ }
+}
+          
+3.	 Write a Java program that keeps a number from the user and generates an integer between 1 and 7 and displays the name of the weekday.
+
+Sample Output
+Input number: 3
+Expected Output :
+Wednesday
+
+import java.util.*;
+ class Example {
+
+    
+  public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Input number:");
+        int day = scan.nextInt();
+        System.out.println(DayName(day));
+    }
+    public static String DayName(int day) {
+        String dayName = "";
+        switch (day) {
+            case 1: dayName = "Monday"; break;
+            case 2: dayName = "Tuesday"; break;
+            case 3: dayName = "Wednesday"; break;
+            case 4: dayName = "Thursday"; break;
+            case 5: dayName = "Friday"; break;
+            case 6: dayName = "Saturday"; break;
+            case 7: dayName = "Sunday"; break;
+            default:dayName = "Invalid input";
+        }
+        return dayName;
+    }
+}
+
+4  Write a program in Java to display the first 10 natural numbers
+
+public class Demo
+ {
+    public static void main(String[] args)
+    {     
+        int i;
+	System.out.println ("The first 10 natural numbers are:\n");
+	for (i=1;i<=10;i++)
+	{      
+		System.out.println(i);
+	}
+System.out.println("\n");
+}
+}
+
+5.Write a program in Java to input 5 numbers from keyboard and find their sum and average
+Sample Output
+Input the 5 numbers : 1 2 3 4 5
+Expected Output :
+Input the 5 numbers :                                                            
+1                                                                                
+2                                                                                
+3                                                                                
+4	                                                                               
+5                                                                                
+The sum of 5 no is : 15                                                          
+The Average is : 3.0  
+
+import java.util.*;
+class Demo
+{
+   public static void main(String[] args)
+     {       
+       int i,n=0,sum=0;
+	double avg;
+	{
+	   
+        System.out.println("Input the 5 numbers : ");  
+         
+	}
+		for (i=0;i<5;i++)
+		{
+		    Scanner scan = new Scanner(System.in);
+		    n = scan.nextInt();
+		    sum+=n;
+	}
+	avg=sum/5;
+	System.out.println("The sum of 5 no is : " +sum+"\nThe Average is : " +avg);
+ 
+}
+}
+
+6.Write a program to take product information using scanner like productid, product name, product price, quantity,category,brand and display
+
+import java.util.*;
+class Demo
+{
+  public static void main(String[] args) {
+  Scanner scan = new Scanner(System.in);
+  System.out.print("Input first number: ");
+  int number1 = scan.nextInt();
+  System.out.print("Input second number: ");
+  int number2 = scan.nextInt();
+  System.out.println(number1 + " x " + number2 + " = " + number1 * number2);
+ }
+}
+
+
+
