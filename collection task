@@ -1,0 +1,131 @@
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+public class EmployeeService {
+
+	List<Employee> list = EmployeeRepository.getEmployees();
+
+	public void getEmployee(int id, String name) {
+		//display the Employee details based on id or name
+		
+		
+		Iterator<Employee> it = list.iterator();
+		int searchId = id;
+		String searchName=name;
+		while (it.hasNext()) {
+			Employee emp = it.next();
+			if (emp.getId() == searchId || emp.getName()==searchName){
+				System.out.println(emp);
+				//return emp;
+	}
+			}
+	// null;
+	
+	}
+	public void getEmployees(Double salary) {
+		// display the names of employees who are getting the salary greater than the 60000
+		// salary given
+		Iterator<Employee> it1=list.iterator();
+		double empSalary=salary;
+		while(it1.hasNext()){
+			Employee emp1=it1.next();
+			if(emp1.getSalary()>empSalary){
+				System.out.println(emp1.getName());
+			}
+			
+		}
+		
+		//return null;
+	}
+
+	public Double getMaxSalary() {
+		// display the max salary
+		Iterator<Employee> it2=list.iterator();
+		while(it2.hasNext()){
+			Employee emp2=it2.next();
+			Double maxSalary=Math.max(emp2.getSalary(), emp2.getSalary());
+		}
+		
+		return null;
+	}
+
+	public Double getSumOfSalary() {
+		// display the sum of salaries of all the employees
+		double sumOfSalary=0;
+		Iterator<Employee> it3=list.iterator();
+		while(it3.hasNext()){
+		Employee emp3=it3.next();
+		sumOfSalary=sumOfSalary+emp3.getSalary();
+		}
+		return sumOfSalary;
+
+	}
+
+	public List<String> getNames(String city) {
+		// display the names of all employees who are working in 'Pune'
+		Iterator<Employee> it4 = list.iterator();
+		//int searchId = id;
+		String searchCity=city;
+		while (it4.hasNext()) {
+			Employee emp4 = it4.next();
+			if (emp4.getName()==searchCity){
+				List<String> CityEmployees=emp4.getName();
+				
+			}
+		
+		return CityEmployees;
+	}
+	}
+
+	public List<Employee> getDetails() {
+		// display all employees based on salary ascending
+		Iterator<Employee> it = list.iterator();
+		while (it.hasNext()) {
+			Employee emp5 = it.next();
+			
+			emp5.getSalary.Collections.sort();
+			List<Employee> employeeBasedOnSalaryOrder=emp5.getName();
+		}
+		return employeeBAsedOnSalry;
+	}
+
+	public List<Employee> getManagers() {
+		// display all employees who are working as managers
+		Iterator<Employee> it = list.iterator();
+		
+		while (it.hasNext()) {
+			Employee emp6 = it.next();
+			if (emp6.getDesgination()=="Manager"){
+				List<Employee> EmployeeBasedOnDesgination=emp6.getName();
+			}
+				
+			}
+		
+		return EmployeeBasedOnDesgination;
+	}
+
+	public Double getSumOfManagerSalaries() {
+		// display the sum of salaries of employees who are working as managers
+		double sumOfManagerSal=0;
+		while(it.hasNext()){
+			Employee emp7=it.next();
+			if(emp7.getDesignation()=="Manager"){
+				
+			
+			sumOfManagerSal=sumOfManagerSal+getSalary();
+		}
+			}
+		return sumOfManagerSal;
+	}
+
+	public List<Integer> getIds() {
+		// display the ids of all employees
+		Iterator<Employee> it8 = list.iterator();
+		while (it8.hasNext()) {
+			Employee emp = it.next();
+			List<Integer> employeeId=emp.getId();
+		}
+		return employeeId;
+	}
+}
