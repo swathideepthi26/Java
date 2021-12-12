@@ -1,0 +1,57 @@
+package StringTask;
+
+public class StringTask5 {
+
+	public static void main(String[] args) {
+		String givenString="Fisglobal bangalore karnataka";
+		char[] ch=givenString.trim().toCharArray();
+		int count=0;
+		for(int i=0;i<givenString.length()-1;i++)
+		{
+			if(ch[i]==' ')
+			{
+				count=count+1;
+			}
+		}
+		count=count+1;
+System.out.println("The number of words are"+count);
+	}
+
+}
+
+
+package StringTask;
+
+public class StringTask8 {
+public static void main(String[] args) {
+	String name="amc enginering college";
+	char[] ch=name.toCharArray();
+	String str="";
+	for(int i=0;i<name.length();i++)
+	{
+		str=str+Character.toUpperCase(ch[i]);
+		
+	}
+	System.out.println(""+str);
+}
+}
+
+
+package StringTask;
+
+import java.util.Scanner;
+
+public class StringTask_1 {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String: ");
+		String userInput=scan.next();
+		System.out.println("Enter the index number to get the character");
+		byte indexNumber=scan.nextByte();
+		System.out.println("the character at the given index is: "+(userInput.charAt(indexNumber)));
+		
+               
+	}
+
+}
